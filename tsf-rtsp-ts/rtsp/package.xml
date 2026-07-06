@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<package version="1.0">
+    <description>RTSP</description>
+    <author mailto="maxim.menshikov@interpretica.io" />
+    <session track_conf="silent">
+        <prologue><script name="prologue"><objective>Prepare the RTSP group.</objective></script></prologue>
+        <epilogue><script name="epilogue"><objective>Finalize the RTSP group.</objective></script></epilogue>
+        <run><script name="probe"><objective>OPTIONS + DESCRIBE a configured RTSP endpoint.</objective></script></run>
+    </session>
+</package>

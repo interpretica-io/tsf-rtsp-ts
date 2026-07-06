@@ -1,0 +1,15 @@
+/** @mainpage
+
+This suite exercises tsf-rtsp - an RTSP (RFC 2326) control client driven
+from the Test Agent it runs on, over libcurl's built-in RTSP:
+
+- @ref rtsp-probe - OPTIONS a configured endpoint (log its Public method
+  set and Server header), then DESCRIBE it (log the status and the SDP's
+  content-type). Control only - no media is streamed.
+
+The endpoint is the test's to supply (env TSF_RTSP_URI, e.g.
+rtsp://host:554/stream); with none configured the test skips cleanly. The
+point is that tsf-rtsp drives RTSP over the library (not by scraping a
+tool) and parses the reply into structured fields.
+
+*/

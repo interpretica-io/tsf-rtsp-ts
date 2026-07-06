@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<package version="1.0">
+    <description>tsf-rtsp demonstration suite</description>
+
+    <!-- @page rtsp-ts RTSP Suite
+          @objective Exercise tsf-rtsp against an RTSP endpoint from the
+                     agent the suite runs on.
+
+          @par Test Groups:
+          - @ref rtsp-probe - OPTIONS + DESCRIBE a configured endpoint
+
+          @par Notes:
+          - RTSP is driven on the agent, in its RPC server, over libcurl.
+          - The endpoint is supplied via env TSF_RTSP_URI; with none set
+            the test skips cleanly (no RTSP server to point at is not a
+            failure).
+    -->
+
+    <author mailto="maxim.menshikov@interpretica.io" />
+
+    <session track_conf="silent">
+        <prologue>
+            <script name="prologue">
+                <objective>Prepare the test environment.</objective>
+            </script>
+        </prologue>
+        <epilogue>
+            <script name="epilogue">
+                <objective>Finalize the test environment.</objective>
+            </script>
+        </epilogue>
+        <run>
+            <package name="rtsp" />
+        </run>
+    </session>
+</package>

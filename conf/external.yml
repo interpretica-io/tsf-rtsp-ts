@@ -1,0 +1,8 @@
+repositories:
+  - name: tsf_rtsp
+    url: https://github.com/interpretica-io/tsf-rtsp.git
+    ref: main
+    libs:
+      - ta_rtsp
+      - rpcs_rtsp
+      - tapi_rtsp
